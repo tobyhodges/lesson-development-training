@@ -185,12 +185,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         The Carpentries Workbench
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#github-pages">GitHub Pages</a></li>
+<li><a href="#using-the-carpentries-workbench">Using The Carpentries Workbench</a></li>
+<li><a href="#adding-lesson-content">Adding Lesson Content</a></li>
+<li><a href="#defining-episode-objectives">Defining Episode Objectives</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -400,25 +410,14 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The Carpentries Workbench</h1>
-        <p> Last updated on 2022-02-03 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/07-infrastructure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-02-24 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/07-infrastructure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
 
         
 
-<ul><li>The Carpentries lesson infrastructure
-<ul><li>The components: (R)Markdown, GitHub</li>
-<li>How they fit together to create a lesson website</li>
-</ul></li>
-<li>Creating a new lesson repository</li>
-<li>Initial lesson configuration
-<ul><li>TODO initialisation steps for a <code>sandpaper</code> lesson</li>
-<li>completing lesson repository setup (topics, lesson URL, README.md)</li>
-</ul></li>
-<li>Add list of prerequisites as bullet list on <code>index.md</code>
-</li>
-</ul><div class="overview card">
+<div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
 <div class="col-md-4">
@@ -438,36 +437,331 @@
 <ul><li>Identify the key tools used in The Carpentries lesson infrastructure.</li>
 <li>Complete the fundamental setup steps for a new lesson repository.</li>
 <li>Edit Markdown files using the GitHub web interface.</li>
+<li>Define the objectives of a section within a whole lesson.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
+<p>At this stage in the training, you should have a clear idea of who the people are that you want to teach this lesson to, and what exactly the skills are that you want them to learn while they are following it. It is time to begin creating a website that will present that lesson to the world!</p>
+<section id="github-pages"><h2 class="section-heading">GitHub Pages</h2>
+<hr class="half-width"><p>The source of all The Carpentries lessons is made publicly-available in repositories on <a href="https://github.com/" class="external-link">GitHub</a>. By making our repositories public like this, we encourage others to help us maintain and improve our lessons, and make it as easy as possible for them to re-use and modify our lessons for their own purposes.</p>
+<p>GitHub provides a hosting service to open source projects such as these, allowing users to present their projects to the wider world. The repository includes a complete history of the changes made between versions of the individual files in the project, and provides many features that facilitate collaboration on projects. We will learn more about some of those collaborative features later in this training. For now, we will focus on one other important feature that GitHub provides: website hosting.</p>
+<p>Via a system called <strong>GitHub Pages</strong>, users can build and host websites from the files present in any repository on GitHub. For many years, this has been how The Carpentries presents its lesson websites to the world.</p>
+</section><section id="using-the-carpentries-workbench"><h2 class="section-heading">Using The Carpentries Workbench</h2>
+<hr class="half-width"><p>Carpentries lesson websites are built with <strong>The Carpentries Workbench</strong>, a toolkit that converts Markdown and RMarkdown files into the HTML that can be served by GitHub Pages. We will use it now to initialise a new lesson.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="a-brief-history-of-the-carpentries-lesson-infrastructure" class="callout-inner">
+<h3 class="callout-title">A Brief History of The Carpentries Lesson Infrastructure</h3>
+<div class="callout-content">
+<p>In the past, our lesson sites were generated by software called <em><a href="https://jekyllrb.com/" class="external-link">Jekyll</a></em>, a tool built into GitHub Pages that allows the webpage content, written in the text files of the repository, to be combined with descriptions of settings, structure, and styling, to create a website. The template used by Jekyll to structure and style lessons was initially developed in 2013/2014 by Abby Cabunoc Mayes, Greg Wilson, Jon Pipitone, and Michael Hansen for <a href="https://software-carpentry.org/" class="external-link">Software Carpentry</a>. It was <a href="https://github.com/carpentries/styles/graphs/contributors" class="external-link">expanded and maintained by many members of the community</a> over almost a decade, to also support <a href="https://datacarpentry.org/" class="external-link">Data Carpentry</a>, <a href="https://librarycarpentry.org/" class="external-link">Library Carpentry</a>, and many other lessons.</p>
+<p>In 2022, we adopted a new infrastructure for our lesson sites: <strong>The Carpentries Workbench</strong>. Lesson sites built on the Workbench are still hosted with GitHub Pages, but no longer use Jekyll. Instead, the lessons are built using a programming language, <em><a href="https://www.r-project.org/" class="external-link">R</a></em>, and <em><a href="https://pandoc.org/" class="external-link">pandoc</a></em>, a software designed for converting content between file formats. The Workbench combines three R packages:</p>
+<ul><li>
+<a href="https://github.com/carpentries/sandpaper/" class="external-link">sandpaper</a>: converts a collection of Markdown or RMarkdown files into the structure of a lesson website.</li>
+<li>
+<code>{varnish}</code>: provides the files and folders that add styling and additional functionality to a lesson website.</li>
+<li>
+<a href="https://github.com/zkamvar/pegboard" class="external-link">pegboard</a>: an programmatic interface to the lesson, enabling various automated validation tasks.</li>
+</ul><p>For lesson developers, the Workbench makes The Carpentries lesson repositories much simpler to navigate and work with.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="creating-a-lesson-repository">Creating a Lesson Repository<a class="anchor" aria-label="anchor" href="#creating-a-lesson-repository"></a></h3>
+<p>To get started, we first need to create a new repository for our lesson. We will use a template to do this, so that the new repository contains the basic files and folders that the Workbench needs in order to build a lesson site. There are currently two templates to choose between:</p>
+<ol style="list-style-type: decimal"><li><a href="https://github.com/carpentries/workbench-template-md/generate" class="external-link">A Markdown template</a></li>
+<li>
+<a href="https://github.com/carpentries/workbench-template-rmd/generate" class="external-link">An RMarkdown template</a>, best suited to lessons that will include R source code that will generate output.</li>
+</ol><p><strong>One member of each participating lesson team</strong> should choose one of these templates, following the link above and completing the configuration as follows:</p>
+<ul><li>add a name for the repository
+<ul><li>The name should be descriptive but fairly brief, with hyphens (<code>-</code>) to separate words</li>
+<li>the name can always be changed later, via the repository settings</li>
+</ul></li>
+<li>in the “Description” field, write the title of your lesson</li>
+<li>choose “Public” visibility</li>
+<li>leave “Include all branches” <strong>unchecked</strong>
+</li>
+</ul><p>After pressing the <em>Create repository using this template</em> button, you should be presented with a brand new lesson repository.</p>
+<p>TODO insert screenshot of repository structure here</p>
+<div class="section level4">
+<h4 id="adding-collaborators">Adding collaborators<a class="anchor" aria-label="anchor" href="#adding-collaborators"></a></h4>
+<p>To be able to add content to the lesson, your collaborators on this project will need access to the repository. To add collaborators to the repository, navigate to <em>Settings</em>, then choose <em>Collaborators</em> from the left sidebar. Now repeat the following steps for every collaborator working with us on the project.</p>
+<ul><li>Click <em>Add people</em> and enter the GitHub username of one of our collaborators.</li>
+<li>Click <em>Add USERNAME to this repository</em>.</li>
+</ul><p>Your collaborator should receive an email inviting them to join the repository. After they have accepted this invitation, they should be able to edit the repository, adding new files and modifying existing ones. Only the person who created the repository will be able to adjust the repository settings.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="repository-files">Repository Files<a class="anchor" aria-label="anchor" href="#repository-files"></a></h3>
+<p>The repository contains a number of files and folders. Most of these are source files for the content of our new lesson, but a few are accompanying files primarily intended for the repository itself rather than the lesson website. These are:</p>
+<ul><li><code>CODE_OF_CONDUCT.md</code></li>
+<li><code>CONTRIBUTING.md</code></li>
+<li><code>LICENSE.md</code></li>
+<li><code>README.md</code></li>
+<li><code>.gitignore</code></li>
+<li>and the <code>.github/</code> folder.</li>
+</ul><p>We will address all of the files later in the training. For now, we will move on to complete the basic setup of the lesson.</p>
+</div>
+<div class="section level3">
+<h3 id="configuring-a-lesson-repository">Configuring a Lesson Repository<a class="anchor" aria-label="anchor" href="#configuring-a-lesson-repository"></a></h3>
+<div class="section level4">
+<h4 id="activating-github-pages">Activating GitHub Pages<a class="anchor" aria-label="anchor" href="#activating-github-pages"></a></h4>
+<p>We need to tell GitHub to begin serving the lesson website via GitHub Pages. To do this, navigate to <em>Settings</em>, then choose <em>Pages</em> from the left sidebar. Under <em>Source</em>, choose the <code>gh-pages</code> branch, leave the folder set to <code>/ (root)</code>, and click <em>Save</em>. Now, copy the URL in the box: this will be the address of your lesson site.</p>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="which-branch-to-use" class="callout-inner">
+<h3 class="callout-title">Which branch to use?</h3>
+<div class="callout-content">
+<p>Although we configure GitHub Pages to serve the lesson website from the <code>gh-pages</code> branch, <strong>the default working branch for a lesson will be <code>main</code></strong>. For the rest of this training, you should add and edit files on <code>main</code>, and in future, when you open Pull Requests to update the lesson content, these should also be made to <code>main</code>. The <code>gh-pages</code> branch should never be modified by anyone other than the automated actions-user account.</p>
+</div>
+</div>
+</div>
+<p>Returning to the repository home page (e.g. by clicking the name of the project near the top left of the window), click the gear wheel icon near the top right, to edit the <em>About</em> box. Paste the Pages URL into the <em>Website</em> box and click <em>Save changes</em>.</p>
+<p>After following these steps, when you navigate to the pages URL, you should be see a lesson website with The Carpentries logo and “Lesson Title” in the top-left corner. You may need to wait a few minutes for the website to be generated.</p>
+</div>
+<div class="section level4">
+<h4 id="config-yaml"><code>config.yaml</code><a class="anchor" aria-label="anchor" href="#config-yaml"></a></h4>
+<p>The lesson title can be adjusted by modifying the <code>config.yaml</code> file in the repository. The <code>config.yaml</code> file contains several global parameters for a lesson - to determine some of the page styling, contact details for the lesson, etc - and is written in <em><a href="https://yaml.org/" class="external-link">YAML</a></em>, a structured file format of key-pair values. As well as the title of the lesson, you can and should adjust some of the other values in <code>config.yaml</code>, but you should not need to add new values or learn a lot about YAML to be able to configure your lesson.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="exercise-practice-editing-markdown-in-github-5-minutes" class="callout-inner">
-<h3 class="callout-title">Exercise: practice editing Markdown in GitHub (5 minutes)</h3>
+<div id="practice-with-config.yaml-5-minutes" class="callout-inner">
+<h3 class="callout-title">Practice with <code>config.yaml</code> (5 minutes)</h3>
 <div class="callout-content">
-<p>Add the objectives you defined for your lesson as another bullet list in the <code>index.md</code> file of your lesson repository.</p>
+<p>Complete the configuration of your lesson by adjusting the following fields in <code>config.yaml</code>:</p>
+<ul><li>
+<code>email</code>: add an email address people can contact with questions about the lesson/project.</li>
+<li>
+<code>created</code>: the date the lesson was created (today’s date) in YYYY-MM-DD format.</li>
+<li>
+<code>keywords</code>: a (short) list of keywords for the lesson, which can help people find your lesson when searching for resources online.</li>
+<li>
+<code>source</code>: change this to the URL for your lesson repository.</li>
+</ul><p>We will revisit the <code>life_cycle</code> and <code>carpentry</code> fields in <code>config.yaml</code> later in this training.</p>
 </div>
 </div>
 </div>
-<ul><li>Creating a new episode
-<ul><li>Add a title and define objectives for this episode</li>
-</ul></li>
-</ul><div id="discussion2" class="callout discussion">
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="improving-the-readme.md-5-minutes" class="callout-inner">
+<h3 class="callout-title">Improving the <code>README.md</code> (5 minutes)</h3>
+<div class="callout-content">
+<p>The <code>README.md</code> file is the “front page” of your lesson repository on GitHub, and is written in Markdown. You should use it to provide basic information about the project, for anyone who finds their way to the source files for your lesson. Take a few minutes to update it with some basic information about the project:</p>
+<ul><li>the lesson title</li>
+<li>a short description of the lesson</li>
+<li>a list of the names of the authors, optionally linked to their GitHub profile</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="adding-lesson-content"><h2 class="section-heading">Adding Lesson Content</h2>
+<hr class="half-width"><p>Now that we have completed the basic configuration of a lesson site, it is time to move on and look at where the actual lesson content will be written.</p>
+<div class="section level4">
+<h4 id="lesson-home-page">Lesson Home Page<a class="anchor" aria-label="anchor" href="#lesson-home-page"></a></h4>
+<p>The “home page” of a lesson is created from the <code>index.md</code> file: this file should contain a brief introduction to the lesson, designed to give visitors to the page a first impression of the lesson and whether it is appropriate for them. The file begins with a short header, written in the same key-value pair syntax we encountered in <code>config.yaml</code>.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">site:</span><span class="co"> sandpaper::sandpaper_site</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre>
+</div>
+<p>This header configures how the site will be built by <code>sandpaper</code>, one of the components of The Carpentries Workbench, and should be left untouched. The page content begins after the blank line that follows this header.</p>
+<p>To get started on this home page, replace the template text with the same title and short description you added to your <code>README.md</code>.</p>
+<p>Below those, you can add the prerequisite skills you determined earlier for your lesson, as a bullet point list to <code>index.md</code>:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>prerequisite 1</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>prerequisite 2</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>...</span></code></pre>
+</div>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="exercise-practice-editing-markdown-in-github-optional" class="callout-inner">
+<h3 class="callout-title">Exercise: practice editing Markdown in GitHub (optional)</h3>
+<div class="callout-content">
+<p>Add the objectives you defined for your lesson as a bullet list in the <code>index.md</code> file of your lesson repository.</p>
+</div>
+</div>
+</div>
+<p>The main body of the lesson is written in <em>episodes</em>: the individual chunks or sections that the lesson is separated into. The episode pages of the lesson site will be constructed from Markdown files in the <code>episodes</code> folder of the lesson repository.</p>
+<div id="callout3" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="why-episodes" class="callout-inner">
+<h3 class="callout-title">Why episodes?</h3>
+<div class="callout-content">
+<p>TODO: add context and explanation for our use of “episodes” to describe chunks of a lesson.</p>
+</div>
+</div>
+</div>
+<p>The <code>episodes</code> folder of the new repository contains a single file, <code>01-introduction.md</code>. The content of this file includes examples of how to write Markdown files for The Carpentries Workbench.</p>
+<p>There are two important things to note:</p>
+<ol style="list-style-type: decimal"><li>Like <code>index.md</code>, the episode file begins with a short header. The fields in this header describe the episode title and the estimated time (in minutes) required to teach it and complete the exercises.</li>
+<li>The example content includes several lines that start with strings of colons (<code>:::::::</code>). These mark the beginnings and ends of structural elements within the page, called <em>fenced divs</em>. Each fenced div starts and ends with a string of colons. A word at the end of the starting colons indicates what kind of block it is. We will explore them in more detail later in the training.</li>
+</ol><p>Let’s create a new episode file, for one of the episodes you have just identified. First, open the “raw” view of the <code>01-introduction.md</code> example episode, and copy the first 19 lines, down to the blank line under the closing string of the <code>objectives</code> div.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Using Markdown"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">teaching:</span><span class="co"> 10</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">exercises:</span><span class="co"> 2</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>:::::::::::::::::::::::::::::::::::::: questions </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How do you write a lesson using Markdown and <span class="in">`{sandpaper}`</span>?</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::::::::::::::</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::: objectives</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain how to use markdown with The Carpentries Workbench</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Demonstrate how to include pieces of code, figures, and nested challenge blocks</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::::::::::::::</span></code></pre>
+</div>
+
+<p>Now create a new file in the <code>episodes</code> folder and, based on the episodes you planned out in <em>Defining lesson objectives</em>, choose a name for it that concisely describes the intended content. To control the order of episodes in the lesson, the name should start with two digits, e.g. <code>02-data-visualisation.md</code>.</p>
+<p>For page content, paste those first 19 lines of the <code>01-introduction.md</code> file and:</p>
+<ol style="list-style-type: decimal"><li>replace the title</li>
+<li>set the <code>teaching</code> and <code>exercises</code> fields to zero for now</li>
+<li>replace the contents of the <code>questions</code> and <code>objectives</code> divs with “TODO”</li>
+</ol><div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Episode Title"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">teaching:</span><span class="co"> 0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">exercises:</span><span class="co"> 0</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::::::::::::::::::::::::::::::::::::: questions </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TODO</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::::::::::::::</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::: objectives</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TODO</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::::::::::::::</span></code></pre>
+</div>
+<div id="discussion4" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="exercise-practice-creating-episodes-10-minutes" class="callout-inner">
 <h3 class="callout-title">Exercise: practice creating episodes (10 minutes)</h3>
 <div class="callout-content">
-<p>Repeat the steps you just saw, to create another new episode file. If you know what another episode in your lesson will be about, create the page for that. Otherwise, feel free to use any values you like for the file name, episode title, etc.</p>
+<p>Repeat the steps you just saw, to create another new episode file. If you know what another episode in your lesson will be about, create the page for that. Otherwise, feel free to use any values you like for the file name and episode title.</p>
 </div>
 </div>
 </div>
+<p>When these episode files have been created, you can navigate back to the lesson website. Refresh the page and, under <em>Chapters</em> in the left sidebar, you should find the titles of all the episodes in the <code>episodes</code> folder of your repository. Clicking on one of those titles will take you to the episode page built from the file you created. At the top of the page body, you will find the episode title and an <em>Overview</em> box containing a list of the questions and objectives defined for the episode. Later, we will add more content to your chosen episodes.</p>
+<p>TODO add a labelled screenshot of a new episode page</p>
+<p>Using this approach, we can build up our lesson one episode at a time.</p>
+<p>We have now learned everything we need to be able to use The Carpentries Workbench, and our focus can return to the process of developing a new lesson.</p>
+</div>
+</section><section id="defining-episode-objectives"><h2 class="section-heading">Defining Episode Objectives</h2>
+<hr class="half-width"><p>In <em>Defining Lesson Objectives</em>, you created a list of the learning objectives for your lesson as a whole. This process is helpful as a way to set the end goal and, coupled with the expected prior knowledge of the target audience you identified, describe the scope of the lesson.</p>
+<p>We can use the same approach for the individual episodes of a lesson, defining objectives for the episode to make clear what we intend to teach in that section. Defining these objectives <em>before writing the episode content</em> helps us to:</p>
+<ul><li>stay focused in the episode, without spending time on non-essential topics</li>
+<li>determine whether learners are attaining the skills we wish to teach them (we will discuss this more in the next two episodes)</li>
+<li>summarise the skills the learner can expect to gain by following this section of the lesson</li>
+</ul><div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-define-objectives-for-your-episode-30-minutes" class="callout-inner">
+<h3 class="callout-title">Exercise: define objectives for your episode (30 minutes)</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li>Using the same approach as you did for your whole-lesson objectives, define a set of SMART objectives for your chosen episode. (15 minutes)</li>
+<li>Add this list of objectives to replace the <code>TODO</code> in the <code>objectives</code> fenced div of your episode file (5 minutes)</li>
+<li>Compare your list with those created by your collaborators on the lesson:
+<ul><li>are there any gaps in these objectives, i.e. anything that should be covered in these episodes but is not captured in the objectives?</li>
+<li>are there any overlaps, i.e. anything that looks like it will be covered more than once?</li>
+</ul></li>
+<li>As a group, discuss how you will address any problems identified in the previous step, and edit your objectives accordingly.</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>After you have defined the episode objectives, you can add them to the <code>objectives</code> div as follows:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::: objectives</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>objective 1</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>objective 2</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>...</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>::::::::::::::::::::::::::::::::::::::::::::::::</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="more-practice-with-fenced-divs-optional" class="callout-inner">
+<h3 class="callout-title">More Practice with Fenced Divs (optional)</h3>
+<div class="callout-content">
+<p>The Carpentries Workbench provides another type of fenced div, <code>prereq</code>, that can be used to create a block highlighting the preprequisites for a lesson.</p>
+<p>Use one of these <code>prereq</code> fenced divs to format the list of prerequisite skills you added to your <code>index.md</code> file earlier.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>In <code>index.md</code>:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:::::::::: prereq</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>prerequisite 1</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>prerequisite 2</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>...</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>:::::::::::::::::</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Now that we have defined objectives for our episodes, we can start working on the next step in developing an effective lesson: designing exercises that will assess whether a learner has learned what you aimed to teach them.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -479,10 +773,7 @@
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="06-long-break.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="08-short-break.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -529,7 +820,7 @@
   "url": "https://carpentries.github.io/lesson-development-training/07-infrastructure.html",
   "identifier": "https://carpentries.github.io/lesson-development-training/07-infrastructure.html",
   "dateCreated": "2022-02-24",
-  "dateModified": "2022-02-03",
+  "dateModified": "2022-02-24",
   "datePublished": "2022-02-24"
 }
 
