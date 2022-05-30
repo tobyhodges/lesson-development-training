@@ -168,12 +168,24 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Defining lesson objectives/outcomes
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#why-focus-on-skills">Why focus on skills?</a></li>
+<li><a href="#learning-objectives">Learning objectives</a></li>
+<li><a href="#what-does-an-objective-look-like">What does an objective look like?</a></li>
+<li><a href="#smart-objectives">SMART objectives</a></li>
+<li><a href="#lesson-scope">Lesson scope</a></li>
+<li><a href="#defining-learning-objectives">Defining learning objectives</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -401,7 +413,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Defining lesson objectives/outcomes</h1>
-        <p> Last updated on 2022-02-18 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/05-objectives.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-05-30 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/05-objectives.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 80 minutes </p>
         
         <div class="text-end">
@@ -410,7 +422,6 @@
 
         
 
-<p>To ensure your audience stays motivated, and your lesson feels relevant to them, it helps to focus on teaching skills not tools i.e. lessons should be centered around what you are empowering learners to do, what will be most beneficial to them, This is as opposed to exploring features or commands for the sake of completeness, because they are new, or because they are interesting to you from a theoretical perspective.</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -435,40 +446,140 @@
 </div>
 </div>
 </div>
-<p>The desired end point (the objective) of a lesson should be new things that the learner can do. Cognitive skills cannot be equally easily acquired: before we can apply concepts and create something new, we must attain the ability to remember and distinguish between new concepts. Remembering and distinguishing are also abilities that are often faster to gain then applying or creating.</p>
-<p>We must try to be realistic about how far along this scale we can move learners during a single workshop/lesson. This is one reason why the target audience is so important: if we can predict what learners will know when they arrive at the lesson, we can better define the outcomes we can expect when they leave. We can also use definition of target audience to better select learners who will arrive with the appropriate prior knowledge and motivation.</p>
-<p>Defining objectives for a lesson is essential because it helps us to focus the rest of our time on developing content that is necessary to help learners reach these goals. It will help us ensure we do not miss anything important or, conversely, include anything superfluous that could use up valuable time or distract instructors and learners.</p>
-<p>When defining objectives, the skills described should be observable/measurable i.e. action verbs such as “explain,” “choose,” or “predict,” rather than “know,” “understand,” or “appreciate.”</p>
-<ul><li>Foundational knowledge and understanding vs creative and analytical skills.
-<ul><li>The former are required for the latter and, if your target audience is not arriving at your workshop with the relevant foundational knowledge and understanding, it is unrealistic to get them to succeed at analytic and creative tasks within your lesson.</li>
-<li>Also: do not mix up the order of these e.g. by writing a formative assessment that requires analytic skills before your learners have had a chance to commit their foundational knowledge and understanding to long term memory.</li>
-<li>Analytic and creative skills take longer to teach and to learn. <a href="https://journals.physiology.org/doi/pdf/10.1152/advan.00061.2005" class="external-link">Trying to fit too much content into a lesson is counter-productive</a>.</li>
-</ul></li>
-<li>Try to write objectives that are Specific, Measurable, Attainable, Relevant, and Time-bound (SMART).</li>
-</ul><div id="discussion1" class="callout discussion">
+<p>At this stage of the training, you should have a clear idea of who the target audience is for your lesson, and what knowledge, skills, and abilities you expect them to arrive with. Now it is time to consider the additional knowledge, skills, and abilities they will have by the time they leave: these are the <em>learning outcomes</em> of your lesson. It can feel strange to jump from one end of the process to the other like this, but clearly defining your goals early in the lesson development process is vital. As we will see in this chapter, it helps you to determine the activities, examples, etc that are appropriate for the lesson content, and provides a scope for what should and should not be included.</p>
+<section id="why-focus-on-skills"><h2 class="section-heading">Why focus on skills?</h2>
+<hr class="half-width"><p>To ensure your audience stays motivated, and your lesson feels relevant to them, we recommend that lessons focus on teaching skills rather than tools. Lessons should be centred around what you are empowering learners to <em>do</em>, what will be most beneficial to them, rather than a list of functions or commands you are teaching them to use. Placing the emphasis on skills over tools will help you prioritise key concepts and consider how your lesson can have the biggest impact on the way learners do their work.</p>
+</section><section id="learning-objectives"><h2 class="section-heading">Learning objectives</h2>
+<hr class="half-width"><p>The desired outcomes (the <em>learning objectives</em>) of a lesson should be new skills, i.e. things that the learner can do. For the vast majority of lessons, these will be <em>cognitive skills</em>: things learners can do with their minds. (Lessons intended to teach other kinds of skill, such as woodwork, playing a musical instrument, or making sushi, are probably better suited to a different platform than a static website.) Cognitive skills cannot be equally easily acquired: before we can apply concepts and create something new, we must attain the ability to remember and distinguish between new concepts. Remembering and distinguishing are also abilities that are often faster to gain then applying or creating.</p>
+<p>We must try to be realistic about how far along this scale we can move learners during a single workshop/lesson. This is one reason why the target audience is so important: if we can predict what learners will know when they arrive at the lesson, we can better define the outcomes we can expect when they leave.</p>
+<p>Defining objectives for a lesson is essential because it allows us to focus the rest of our time on developing content that is necessary for learners to reach these goals. It will help us ensure we do not miss anything important or, conversely, include anything superfluous that could use up valuable time or distract instructors and learners.</p>
+</section><section id="what-does-an-objective-look-like"><h2 class="section-heading">What does an objective look like?</h2>
+<hr class="half-width"><p>Objectives can be defined for a lesson as a whole - what should learners be able to do at the end of a workshop teaching this lesson? - and for individual sections within it - what should learners be able to do after following this particular part of the lesson? The objectives for the current section of this training are:</p>
+<div id="checklist1" class="callout checklist">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div id="objectives-for-this-section" class="callout-inner">
+<h3 class="callout-title">Objectives for this section</h3>
+<div class="callout-content">
+<ul><li>Explain the importance of defining specific, measurable, attainable, relevant and time-bound objectives for a lesson.</li>
+<li>Evaluate a written lesson objective according to these criteria.</li>
+</ul></div>
+</div>
+</div>
+<p>These should be read as if they were endings to a sentence beginning</p>
+<blockquote>
+<p>“At the end of this session, learners should be able to …”</p>
+</blockquote>
+<p>Each objective starts with a verb and describes one (and only one) skill the learner will obtain.</p>
+<p>For objectives to be as helpful as possible, they need to be written in a way that will allow us to directly observe whether or not a learner has attained the skills we want them to. This means that the skills described by our objectives should be measurable: as a general rule, action verbs such as “explain,” “choose,” or “predict,” are more helpful than passive verbs such as “know,” “understand,” or “appreciate”, which are hard to directly assess and are often open to interpretation.</p>
+<p>A popular aid for defining learning objectives is <a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/" class="external-link">Bloom’s Taxonomy</a>, which divides cognitive skills into several categories. The original taxonomy arranged these categories in a strict hierarchy, which has since been disputed. Regardless of whether these skills conform to such a hierarchy, the Taxonomy serves as a very useful bank of action verbs for use in learning objectives.</p>
+<p>We will see how helpful it can be to use action verbs in learning objectives when we begin talking about exercise design in the coming chapters.</p>
+</section><section id="smart-objectives"><h2 class="section-heading">SMART objectives</h2>
+<hr class="half-width"><p>To assist you in defining and writing learning objectives for your lesson, it can be helpful to turn to a popular framework for defining goals: <em>SMART</em>.</p>
+<p>SMART objectives should be:</p>
+<ul><li>
+<strong>S</strong>pecific: they should clearly describe a particular skill or ability the learner should have.</li>
+<li>
+<strong>M</strong>easurable: it should be possible to observe and ascertain when the learner has learned the skill/abilities described in the objectives.</li>
+<li>
+<strong>A</strong>ttainable: the learner should realistically be able to acquire the skills or abilities in the time available in a workshop/by following the text of the lesson.</li>
+<li>
+<strong>R</strong>elevant: they should be relevant to the overall topic or domain of the lesson as a whole.</li>
+<li>
+<strong>T</strong>ime-bound: they should include some timeframe within which the goal will be reached. For learning objectives, this is built into the approach described above.</li>
+</ul><div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="exercise-evaluating-learning-objectives-15-minutes" class="callout-inner">
 <h3 class="callout-title">Exercise: evaluating learning objectives (15 minutes)</h3>
 <div class="callout-content">
-<p>Look at examples of learning objectives and identify how they could be improved. Maybe provide a numbered list of objectives, with a table beneath for learners to identify the verb, whether the objective is specific and measurable.</p>
-<p>Discuss as a group how each might be improved.</p>
+<p>Look at the example learning objectives below. Fill in the table for each objective, checking off the cells if you think an objective meets the criteria or leaving it unchecked if not. You should assume each objective is for a lesson to be taught in a two-day workshop. Note down any observations you make as you move through the list. If you have time, try to imagine the titles of lessons that would have these objectives. This part of the exercise should take 10 minutes.</p>
+<p><em>At the end of this lesson, learners will be able to:</em></p>
+<ol style="list-style-type: decimal"><li>create formatted page content with Markdown.</li>
+<li>program with Rust.</li>
+<li>fully understand GitHub Actions.</li>
+</ol><table class="table"><thead><tr class="header"><th>Objective</th>
+<th>Action verb?</th>
+<th>Specific</th>
+<th>Measurable</th>
+<th>Attainable</th>
+</tr></thead><tbody><tr class="odd"><td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr class="even"><td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr class="odd"><td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody></table><p>In the last five minutes of the exercise, we will discuss as a group how each objective might be improved.</p>
 </div>
 </div>
 </div>
-<div id="discussion2" class="callout discussion">
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<table class="table"><thead><tr class="header"><th>Objective</th>
+<th>Action verb?</th>
+<th>Specific</th>
+<th>Measurable</th>
+<th>Attainable</th>
+</tr></thead><tbody><tr class="odd"><td>1</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+<td><span class="emoji" data-emoji="question">❓</span></td>
+<td><span class="emoji" data-emoji="question">❓</span></td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+</tr><tr class="even"><td>2</td>
+<td><span class="emoji" data-emoji="question">❓</span></td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+<td><span class="emoji" data-emoji="question">❓</span></td>
+</tr><tr class="odd"><td>3</td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+<td><span class="emoji" data-emoji="question">❓</span></td>
+</tr></tbody></table><p>Objective 1 is the closest to what we ideally want in a lesson objective, but it illustrates how difficult it can be to make an objective truly specific. For example, a more specific and measurable version of this objective could be:</p>
+<blockquote>
+<p><em>write links, headings and bold and italicised text with Markdown.</em></p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</section><section id="lesson-scope"><h2 class="section-heading">Lesson scope</h2>
+<hr class="half-width"><p>One of the major challenges of lesson design is choosing what to include in a lesson: what the main points will be, in what order they will be introduced, how much detail can be provided, and how much time can be spent on each point. Especially when writing lessons for short form training like a Carpentries workshop, difficult decisions often need to be made about what can and cannot be included. <a href="https://journals.physiology.org/doi/pdf/10.1152/advan.00061.2005" class="external-link">Trying to fit too much content into a lesson is counter-productive</a>, so it is good to avoid the temptation to cram in more content than you have time to cover properly.</p>
+<p>Writing learning objectives is a good opportunity to begin thinking about this lesson scope, and can provide assistance when you are faced with a difficult decision about what content to cut out.</p>
+<p>For instance, consider the order in which new skills must be acquired. Before learners can begin to acquire “higher-level” cognitive skills to perform creative and analytical tasks, they must first acquire the foundational knowledge and conceptual understanding of the domain. Furthermore, these higher-level skills take longer to acquire so, unless you can expect your target audience to arrive at the lesson with the relevant foundational knowledge and understanding, it is probably unrealistic to aim to have learners completing creative tasks before its end.</p>
+<p>As should become clear through activities in the upcoming chapters, lessons can be broadly considered as blocks of content associated with a particular learning objective. This can be helpful when making choices about content to remove, because the task can be considered in the context of taking out whole learning objectives.</p>
+</section><section id="defining-learning-objectives"><h2 class="section-heading">Defining learning objectives</h2>
+<hr class="half-width"><p>We have discussed the importance of defining objectives early in the lesson design process, and looked at some examples of objectives written for other lessons. Now it is time to begin defining objectives for your own.</p>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="exercise-defining-objectives-for-your-lesson-20-minutes" class="callout-inner">
 <h3 class="callout-title">Exercise: defining objectives for your lesson (20 minutes)</h3>
 <div class="callout-content">
-<p>Write SMART learning objectives for your lesson - what do you want learners to be able to do at the end of the workshop?</p>
+<p>Write learning objectives for your lesson - what do you want learners to be able to do at the end of the workshop? When writing these lesson-level objectives, try to follow the SMART framework: make them specific, measurable, attainable, relevant, and time-bound.</p>
 </div>
 </div>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -479,7 +590,7 @@
 <ul><li>Are the objectives clear?</li>
 <li>Do they use “action” verbs?</li>
 <li>Could you directly observe whether a learner had reached this objective?</li>
-</ul><p>Now run the objectives through <a href="https://web.cs.manchester.ac.uk/iloadvisor/" class="external-link">https://web.cs.manchester.ac.uk/iloadvisor/</a> Do the results match your assessment?</p>
+</ul><p>Now run the objectives through <a href="https://web.cs.manchester.ac.uk/iloadvisor/" class="external-link">this Lesson Objective Advisor tool from the University of Manchester’s Faculty of Science and Engineering</a>. Do the results match your assessment?</p>
 <ul><li>Where do the skills described in these objectives sit on the scale?</li>
 <li>(optional) Are these objectives realistic, given the target audience of the lesson?</li>
 </ul></div>
@@ -492,14 +603,13 @@
 <div class="callout-inner">
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
-<ul><li>First key point. Brief Answer to questions. (FIXME)</li>
+<ul><li>Defining objectives for a lesson can help to focus your content on the most important outcomes, and outline the scope of the project.</li>
+<li>Following the SMART framework can help make your learning objectives as useful as possible.</li>
+<li>Leaving objectives unrealistic or undefined increases the risk of a lesson losing focus or spending time on activities that do not help learners gain the most important skills.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/04-short-break.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/06-long-break.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -523,7 +633,7 @@
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.5.6" class="external-link">sandpaper (0.5.6)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.5.7" class="external-link">sandpaper (0.5.7)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.3.0" class="external-link">pegboard (0.3.0)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.1.13" class="external-link">varnish (0.1.13)</a>.</p>
 			</div>
@@ -545,9 +655,9 @@
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/lesson-development-training/instructor/05-objectives.html",
   "identifier": "https://carpentries.github.io/lesson-development-training/instructor/05-objectives.html",
-  "dateCreated": "2022-05-26",
-  "dateModified": "2022-02-18",
-  "datePublished": "2022-05-26"
+  "dateCreated": "2022-05-30",
+  "dateModified": "2022-05-30",
+  "datePublished": "2022-05-30"
 }
 
   </script><script>
