@@ -32,7 +32,16 @@
     <header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav carpentries"><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
-      <div class="large-logo"><img alt="The Carpentries" src="assets/images/carpentries-logo.svg"></div>
+      <div class="large-logo">
+        <img alt="The Carpentries" src="assets/images/carpentries-logo.svg"><abbr class="icon" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="text-decoration: unset">
+           
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #383838">Pre-Alpha
+            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955"></i>
+          </a>
+          <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+        </abbr>
+        
+      </div>
     </div>
     <div class="selector-container ">
       
@@ -1036,7 +1045,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <table class="table">
 <thead><tr class="header">
@@ -2029,20 +2038,10 @@ Solution text, code, and other information
         </div>
 <p>Take a break. If you can, move around and look at something away from your screen to give your eyes a rest.</p></section><section id="aio-15-explanation"><p>Content from <a href="15-explanation.html">How to write a lesson</a></p>
 <hr>
-<p> Last updated on 2022-02-23 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/15-explanation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-06-01 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/15-explanation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<ul>
-<li>Explanatory text is the connective tissue between your examples and exercises (I read this way of describing it somewhere - need to find the reference…). The goal is to ensure coherent flow from one exercise to another.</li>
-<li>How much is too much? I.e. how verbose should your explanatory content be?
-<ul>
-<li>A question of personal style, and preference for in-person vs self-directed learning (see below)</li>
-<li>but the aim is to provide all the relevant information with a minimum of additional content that is not directly required (extraneous cognitive load and wasted time) to help learners reach the objectives you have set out.</li>
-</ul>
-</li>
-<li>In many Carpentries lessons, callout boxes are used for asides and short tangents e.g. points that might be relevant to some audiences but are not essential to the flow of the lesson. (As such, they should be kept to a minimum.)</li>
-</ul>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -2072,15 +2071,20 @@ Solution text, code, and other information
 </div>
 </div>
 </div>
+<section id="writing-explanatory-text"><h2 class="section-heading">Writing Explanatory Text</h2>
+<hr class="half-width">
+<p>Explanatory text helps connect your examples and exercises together into a cohesive lesson. If your examples and exercises are train stations and scenic views, the explanatory text is the train tracks that connect them. Often times the examples and exercises may seem like a good draft for you to teach. However, the explanatory text makes it possible for other instructors and self-directed learners to follow along by providing all the relevant information directly in the lesson. It can also help you remember your goals and stay on track teaching.</p>
+<p>How much text to include is often a question of personal style while balancing the needs of potential users, both other instructors and learners. You want to find the balance between providing enough information for learners to meet the learning objectives without increasing cognitive load with extraneous information. In this section we will discuss factors to consider when you are writing explanatory text.</p>
+<p>There are trade-offs to consider when preparing a site for use as an instructional guide vs use as a self-directed learning resource. Typically, self-directed learning resources are more verbose where instructional guides are aimed at an audience that can fill in the gaps on their own. However, very sparse text is less likely to be re-usable by other instructors as instructors may have different skill levels with the lesson content or differing mental models. In general, it is not a good idea to assume others, learners or instructors, will know what you were thinking when you wrote the content so, if in doubt, be explicit.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="lesson-pages-for-the-instructor-and-the-learner" class="callout-inner">
-<h3 class="callout-title">Lesson pages for the instructor and the learner</h3>
+<div id="using-callouts" class="callout-inner">
+<h3 class="callout-title">Using Callouts</h3>
 <div class="callout-content">
-<p>TODO brief discussion of trade-offs between preparing a lesson site for use as an instructional guide vs use as a self-directed learning resource. (notes below)</p>
-<p>Self-directed learning resources tend to be more verbose, where instructional guides can be aimed at an audience more able to “read between the lines.” Very sparse text is less likely to be re-usable by other Instructors. In general, it is not a good idea to assume others (learners or instructors) will know what you were thinking when you wrote the content so, if in doubt, be explicit.</p>
+<p>Often lessons have more content than can be reasonable taught in the amount of time allotted. This is especially true for collaboratively developed lessons as each contributor/instructor may have additional items they’d like to see included, leading to “scope creep”.</p>
+<p>To address this issue, in many Carpentries lessons, callout boxes are used for asides and short tangents, e.g. points that might be relevant to some audiences but are not essential to the flow of the lesson. These callouts should still be kept to a minimum as they can be disruptive to instructors and readers.</p>
 </div>
 </div>
 </div>
@@ -2088,29 +2092,45 @@ Solution text, code, and other information
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="discussion-10-minutes" class="callout-inner">
-<h3 class="callout-title">Discussion (10 minutes)</h3>
+<div id="group-discussion-10-minutes" class="callout-inner">
+<h3 class="callout-title">Group Discussion (10 minutes)</h3>
 <div class="callout-content">
-<p>At what point is a lesson too long? How might you prioritise what to keep if you have to cut it down?</p>
+<ul>
+<li>At what point is a lesson too long?</li>
+<li>How might you prioritise what to keep if you have to cut it down?</li>
+</ul>
+<p>Trainer Note: Ask one of the other trainers/helpers to take notes of this discussion in the collaborative note-taking document.</p>
 </div>
 </div>
 </div>
+</section><section id="less-is-more"><h2 class="section-heading">Less is More</h2>
+<hr class="half-width">
+<p>Trying to fit too much content into a lesson is counter-productive. It is better to cover less and provide a smaller but stable foundation for learners to build upon.</p>
+<p>You should also consider a realistic workshop length for teaching your lesson. It is difficult to keep learners attentive for many hours over many days. Most Carpentries workshops are two work days of lesson material as it is difficult for learners to attend 4 full days of a workshop. Although, there are some in the community who will run workshops that are three days to cover additional material.</p>
+<p>As you consider the length of your lesson discuss with your collaborators and ask yourself:</p>
 <ul>
-<li>Reminder: trying to fit too much content into a lesson is counter-productive. It is better to cover less and teach people less, than to cover more and teach people even less</li>
-<li>Also worth considering the (realistic) maximum viable length of a workshop that would teach your lesson e.g. it is unusual to be able to convince people to attend a workshop that lasts four full days. (and better to teach people two days-worth of material than teach no-one four days-worth.) Carpentries workshops have settled on two days, but many in our community run three-day workshops to cover additional material.</li>
-<li>What is it essential that you include? What can you leave out if you have to?
-<ul>
-<li>Are there intermediate checkpoints that you can write in, so that the workshop is not reliant on getting through the whole lesson to “bring everything together?”</li>
+<li>What is essential to include?</li>
+<li>What can be left out if needed?</li>
+<li>Are there checkpoints where the lesson could end if needed?</li>
+<li>Can important concepts be moved up earlier to ensure they are covered?</li>
 </ul>
-</li>
-<li>In the end, the only way to know for sure is to pilot the lesson, measuring how long it takes to teach. (link to pilot notes template) But, as a general rule, it is better to assume that you are under-estimating rather than over-estimating the length. Experience suggests that that is most likely correct, and anyway it is better to have spare time for discussion, revisiting exercises, etc than to try to rush through the remaining material in limited time.
-<ul>
-<li>If, after teaching your new lesson, you find that you did not have time to cover all the content, approach cutting down the lesson by identifying which learning objectives to remove. Then take out the objective(s) and the corresponding assessment(s) and explanatory content.</li>
-</ul>
-</li>
-<li>Consider adding suggestions for objectives that can be skipped to the Instructor Notes for the lesson.</li>
-<li>Managing cognitive load</li>
-</ul>
+<p>In the end, the only way to know for sure is to teach the lesson, measuring how long it takes to teach. Borrowing from television, the Carpentries community calls these early workshops, pilot workshops. As you run pilot workshops, you can note the length of time spent in each episode. You might find the <a href="https://codimd.carpentries.org/lesson-pilot-observation-notes-template#" class="external-link">template for notes on pilot workshops</a> helpful as it includes a table for episode and exercise timings. Instructors commonly report running short on time in workshops. Thus, it is better to assume that you are under-estimating rather than over-estimating the length. It is better to have additional time for discussion, review, and wrap-up than to rush through material to fit it into the remaining time.</p>
+<p>If, after piloting your new lesson, you find that you did not have time to cover all the content, approach cutting down the lesson by identifying which learning objectives to remove. Then take out the objective(s) and the corresponding assessment(s) and explanatory content. You may consider making a <a href="https://carpentries.github.io/instructor-training/02-practice-learning/#mapping-a-mental-model" class="external-link">concept map</a> to help identify which objectives depend on one another.</p>
+<p>Alternatively, if you decide to keep certain objectives in the lesson, you can add suggestions on which objectives can be skipped to the Instructor Notes for the lesson.</p>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The Instructor Notes for the whole lesson should be added to the <code>instructors/instructor-notes.md</code> file. This page is displayed in the header menu when in “Instructor View”. You can also add notes <a href="https://carpentries.github.io/workbench/transition-guide.html#instructor-notes)" class="external-link">in a specific episode of the lesson using fenced divs</a>. Instructors can see the notes within the lesson and the instructor notes tab by changing the view in the upper right-hand corner of the lesson to “Instructor View”.</p>
+<p>Try out the instructor view by opening this episode seeing the in-line instructor note below.</p>
+
+</div>
+</div>
+</div>
+<p>As you add notes and think about what to cut, remember, reducing the number of lesson objectives can help with managing learner (and instructor) cognitive load.</p>
 <div id="testimonial1" class="callout testimonial">
 <div class="callout-square">
 <i class="callout-icon" data-feather="heart"></i>
@@ -2130,48 +2150,71 @@ Solution text, code, and other information
 </div>
 </div>
 </div>
+</section><section id="other-important-considerations-for-lesson-text"><h2 class="section-heading">Other Important Considerations for Lesson Text</h2>
+<hr class="half-width">
+<p>When writing your lesson text you also want to avoid unintentionally demotivating your learners. Make time to review your text for:</p>
 <ul>
-<li>How can you avoid demotivating your learners?
+<li>
+<a href="https://carpentries.github.io/instructor-training/04-expertise/index.html#just-and-other-dismissive-language" class="external-link">dismissive language</a> - e.g. ‘simply’, ‘just’</li>
+<li>use of <a href="https://carpentries.github.io/instructor-training/09-eia/index.html#stereotypes" class="external-link">stereotypes</a> (check learner profiles for stereotypes too)</li>
+<li>
+<a href="https://carpentries.github.io/instructor-training/04-expertise/index.html#mind-the-gap" class="external-link">expert awareness gaps</a>, i.e. places where you may be assuming the learners know more than they actually do</li>
+<li>fluid representations, i.e. using different terms with the same meaning interchangeably</li>
+<li>unexplained or unnecessary jargon</li>
+<li>unexplained assumptions</li>
+<li>sudden jumps in difficulty/complexity</li>
+</ul>
+<p>You should also review your text thinking about accessibility. This includes:</p>
 <ul>
-<li>Dismissive language, stereotypes (check your learner profiles too!)</li>
-<li>Expert awareness gap</li>
-<li>Think back to 27+15=42 MCQ example and how challenging it can be to remember the common mistakes in something you mastered a long time ago</li>
-</ul>
+<li>Avoiding regional/cultural references and idioms that will not translate across borders/cultures</li>
+<li>Avoiding contractions i.e. don’t, can’t, won’t etc</li>
+<li>Checking that all figures/images have well written alternative text, including <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81" class="external-link">writing altnerative text for data visualizations</a> - see <a href="https://carpentries.github.io/sandpaper-docs/episodes.html#figures" class="external-link">the Workbench documentation for directions on how to add alt-text and captions to images in a lesson</a>
 </li>
-<li>Fluid representations, unexplained or unnecessary jargon, unexplained assumptions, sudden jumps in difficulty/complexity</li>
-<li>Accessibility
-<ul>
-<li>Avoid regional/cultural references and idioms that will not translate across borders/cultures</li>
-<li>Contractions</li>
-<li>Alternative text for figures/images (including for data visualisations <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81" class="external-link">https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81</a>) - <a href="https://carpentries.github.io/sandpaper-docs/episodes.html#figures" class="external-link">the Workbench documentation describes how to add alt-text and captions to images in a lesson</a>
-</li>
-<li>Header hierarchy (no h1 headers in the lesson body, no skipped levels e.g. h2 -&gt; h4)</li>
-<li>Use descriptive link text - no “click here” or “this page” etc</li>
-<li>Image contrast &amp; tools to check this</li>
+<li>Checking the header hierarchy - no h1 headers in the lesson body, no skipped levels</li>
+<li>
+<a href="https://www.imperial.ac.uk/staff/tools-and-reference/web-guide/training-and-events/materials/accessibility/links/" class="external-link">Using descriptive link text</a> - no “click here” or “this page”, etc</li>
+<li><a href="https://contrastchecker.com/" class="external-link">Checking the text and foreground contrast for images</a></li>
 </ul>
-</li>
-</ul>
-<div id="discussion2" class="callout discussion">
+<div id="challenge1" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="exercise-alternative-text-for-images-5-minutes" class="callout-inner">
-<h3 class="callout-title">Exercise: Alternative text for images (5 minutes)</h3>
+<div id="optional-exercise-alternative-text-for-images-5-minutes" class="callout-inner">
+<h3 class="callout-title">Optional Exercise: Alternative Text for Images (5 minutes)</h3>
 <div class="callout-content">
-<p>TODO/exclude to free up some time</p>
-<p>multiple choice question with an example image and a few different options for alt text. Ask trainees to choose the most appropriate option.</p>
+<p>Which of the following is a good alt-text option for the image below?</p>
+<figure><img src="https://gml.noaa.gov/webdata/ccgg/trends/co2_data_mlo.png" alt="Line graph of increasing carbon dioxide at the Mauna Loa Observatory from 1958 to present" class="figure mx-auto d-block"><figcaption>Atmospheric Carbon Dioxide at Mauna Loa Observatory</figcaption></figure><ol style="list-style-type: decimal">
+<li>Graph of data</li>
+<li>Graph with increasing lines</li>
+<li>Line graph of increasing carbon dioxide in ppm at the Mauna Loa Observatory from 1958 to present</li>
+<li>Line graph of increasing carbon dioxide in ppm at the Mauna Loa Observatory, Hawaii, United States, from 1959 to present including values from each year. Red line shows variation in each year and black line is average for each year. 1959 = 315.90 ppm, 1960 = 316.91, 1961 = 317.64 …</li>
+</ol>
+<p><a href="https://esrl.noaa.gov/" class="external-link"><em>Data/Image provided by NOAA Global Monitoring Laboratory, Boulder, Colorado, USA</em></a></p>
 </div>
 </div>
 </div>
-<ul>
-<li>Defining key terms and Glosario</li>
-<li>Questions and key points
-<ul>
-<li>what and who are these for? how do they tend to be used?</li>
-</ul>
-</li>
-</ul>
-<div id="discussion3" class="callout discussion">
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>The third option, “Line graph of increasing carbon dioxide in ppm at the Mauna Loa Observatory from 1958 to present”, is the best option. It describes the type of plot, what is measured, and the trend.</p>
+<p>The first two options are too vague. They mention a graph but don’t give enough info to know what the graph is actually showing.</p>
+<p>The last option is overly descriptive and starts to list the data itself. It is better to include a shorter, but informative, description and a link to the data instead.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="other-text-to-complete-an-episode"><h2 class="section-heading">Other Text to Complete an Episode</h2>
+<hr class="half-width">
+<p>When writing a lesson, you should also consider adding key terms to the lesson glossary for the lesson. Following the instructions on <a href="https://carpentries.github.io/sandpaper-docs/editing.html#learners" class="external-link">how to create a glossary in the workbench documetation</a> will help you to create this section of the lesson.</p>
+<p>Many of these terms may also be useful for other lessons and can be added to <a href="https://glosario.carpentries.org/" class="external-link">Glosario</a>, a multilingual glossary for computing and data science terms.</p>
+<p>In addition to objectives, a <a href="https://carpentries.github.io/sandpaper-docs/episodes.html?#required-elements" class="external-link">completed episode also requires</a> fenced divs for the questions the episode answers and the keypoints a lesson covers. The questions box helps learners understand what to expect from a lesson as they might not yet understand the learning objectives. The keypoints box wraps up the lesson by providing answers to each of the questions. Keypoints also help self-directed learners review what they learned, remind instructors to recap what was covered in an episode, and help you ensure you answered all the questions you intended for an episode.</p>
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -2182,20 +2225,20 @@ Solution text, code, and other information
 </div>
 </div>
 </div>
-<div id="discussion4" class="callout discussion">
+<div id="discussion3" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="reflection-exercise-20-minutes" class="callout-inner">
 <h3 class="callout-title">Reflection Exercise (20 minutes)</h3>
 <div class="callout-content">
-<p>TODO based on "Map out the relationships between the LOs, the LEs via which they will be delivered &amp; those specific items of content (e.g., item A sup- ports LO 1, &amp; will be delivered using a lecture).</p>
+<p>Map out the relationships between the lesson objectives (LO), the learning experiences via which they will be delivered and those specific items of content (e.g., item A supports LO 1, &amp; will be delivered using a lecture).</p>
 <ul>
-<li>Is there any piece of content that doesn’t support any LO(s)?</li>
-<li>Is there at least one piece of content for each LO?</li>
-<li>Is there at least one LE for each piece of content?"</li>
+<li>Is there any piece of content that doesn’t support any learning objectives?</li>
+<li>Is there at least one piece of content for each learning objective?</li>
+<li>Is there at least one learning experience for each piece of content?</li>
 </ul>
-<p>What do you still need to add/work on? What can you remove/consider removing? What diagram or other visual aid could you add to supplement your text?</p>
+<p>What do you still need to add/work on? What can you remove/consider removing? What diagram or other visual aids could you add to supplement your text?</p>
 </div>
 </div>
 </div>
@@ -2207,11 +2250,14 @@ Solution text, code, and other information
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul>
-<li>First key point. Brief Answer to questions. (FIXME)</li>
+<li>The objectives and assessments provide a good outline for an episode and then the text fills in the gaps to support anyone learning or teaching from the lesson.</li>
+<li>It is important to review your lesson for demotivating language, cognitive load, and accessibility.</li>
+<li>To reduce cognitive load and ensure there is enough time for for the materials, consider which lesson objectives are not needed and remove related content and assessments.</li>
 </ul>
 </div>
 </div>
-</div></section><section id="aio-16-short-break"><p>Content from <a href="16-short-break.html">Break</a></p>
+</div>
+</section></section><section id="aio-16-short-break"><p>Content from <a href="16-short-break.html">Break</a></p>
 <hr>
 <p> Last updated on 2022-02-01 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/16-short-break.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2978,7 +3024,7 @@ Solution text, code, and other information
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.5.7" class="external-link">sandpaper (0.5.7)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.3.0" class="external-link">pegboard (0.3.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.1.13" class="external-link">varnish (0.1.13)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish" class="external-link">varnish (0.1.14)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -2999,9 +3045,9 @@ Solution text, code, and other information
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/lesson-development-training/aio.html",
   "identifier": "https://carpentries.github.io/lesson-development-training/aio.html",
-  "dateCreated": "2022-05-31",
-  "dateModified": "2022-05-31",
-  "datePublished": "2022-05-31"
+  "dateCreated": "2022-06-01",
+  "dateModified": "2022-06-01",
+  "datePublished": "2022-06-01"
 }
 
   </script><script>
