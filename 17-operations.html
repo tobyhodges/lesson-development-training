@@ -285,12 +285,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         How we operate
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#the-carpentries-lesson-development-ecosystem">The Carpentries Lesson Development Ecosystem</a></li>
+<li><a href="#the-lesson-life-cycle">The Lesson Life Cycle</a></li>
+<li><a href="#pilot-workshops">Pilot Workshops</a></li>
+<li><a href="#connecting-with-the-lesson-developer-community">Connecting with the Lesson Developer Community</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -410,32 +420,14 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>How we operate</h1>
-        <p> Last updated on 2022-02-01 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/17-operations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-06-02 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/17-operations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
 
         
 
-<ul><li>The Incubator/Lab/Lesson Program ecosystem
-<ul><li>How all these things fit together</li>
-</ul></li>
-<li>The lesson life cycle
-<ul><li>Stages: pre-alpha, alpha, beta, stable</li>
-<li>Pilot workshops
-<ul><li>Why these are important</li>
-<li>(Briefly) the practicalities of organising/teaching them, collecting feedback, etc</li>
-</ul></li>
-<li>Lesson publication and review</li>
-</ul></li>
-<li>Connecting with The Carpentries curriculum community
-<ul><li>the lesson-dev Slack channel</li>
-<li>creating your own Slack channel for your lesson</li>
-<li>the incubator-developers TopicBox list</li>
-<li>co-working sessions</li>
-<li>further resources for lesson developers</li>
-</ul></li>
-</ul><div class="overview card">
+<div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
 <div class="col-md-4">
@@ -460,14 +452,62 @@
 </div>
 </div>
 </div>
-<div id="discussion1" class="callout discussion">
+<p>Until now, this training has focused on the internals of a lesson development project. Now it is time to consider the context in which this lesson development can take place.</p>
+<section id="the-carpentries-lesson-development-ecosystem"><h2 class="section-heading">The Carpentries Lesson Development Ecosystem</h2>
+<hr class="half-width"><p><a href="https://carpentries-incubator.org/" class="external-link">The Carpentries Incubator</a> is a space for The Carpentries community to collaborate on lessons. It provides a single location where our community can come to find lessons that are being developed by the community, and to create new lessons using The Carpentries Workbench. Community members retain ownership of their lessons hosted in the Incubator, while benefiting from the increased findability it gives to the lesson.</p>
+<p>The Carpentries supports the lesson developer community working in the Incubator with training (like this one), communications designed to raise awareness of lesson projects within the community, and platforms for the community to discuss and collaborate on lesson development.</p>
+<p>The Carpentries also provides a space for community-developed lessons to reside after the initial phases of development have been completed. <a href="https://carpentries-lab.org/" class="external-link">The Carpentries Lab</a> provides a platform for open peer-review of lessons, and hosts the collection of lessons that have passed through this review process. These peer-reviewed lessons can be considered ready to teach by any Instructor with sufficient knowledge of the topic. In the future, this lesson review process may also be used to determine when a lesson in the Incubator is ready to be incorporated into one of The Carpentries <em>Lesson Programs</em>, the collection of lessons and curricula that can be taught in an official workshop for Software, Library, or Data Carpentry.</p>
+</section><section id="the-lesson-life-cycle"><h2 class="section-heading">The Lesson Life Cycle</h2>
+<hr class="half-width"><p>To make it easier for other community members to assess the current state of a lesson in the Incubator, The Carpentries encourages lesson developers to indicate the status of their lesson by labeling its progress through a <em>lesson life cycle</em>:</p>
+<figure><img src="fig/life_cycle.png" alt="Diagram of the life cycle of a lesson in The Carpentries ecosystem. A lesson is proposed at the beginning of the  pre-alpha stage. It enters alpha when it is taught for the first time. In beta, it is  taught by other instructors. A full release of the lesson is made when it is stable.  Pilot workshops take place during the alpha and beta phases. The Carpentries Lab hosts  open peer review of lessons that have completed the beta phase." class="figure mx-auto d-block"><figcaption>The life cycle of a lesson</figcaption></figure><p>Each life cycle stage indicates the level of maturity of a lesson:</p>
+<ul><li>
+<strong>pre-alpha</strong>: a first draft of the lesson is still being constructed.</li>
+<li>
+<strong>alpha</strong>: the lesson has been/is being taught by the original authors, but has not been fully tested.</li>
+<li>
+<strong>beta</strong>: the lesson is ready to be taught by instructors who have not been significantly involved in its developed to this point.</li>
+<li>
+<strong>stable</strong>: the lesson has been extensively tested by the authors and others. It can be considered broadly complete and unlikely to undergo any drastic changes without warning.</li>
+</ul><p>The life cycle stage of a lesson is displayed as a banner on the lesson site, as a label on the lesson GitHub repository, and alongside the lesson whenever it is shown on The Carpentries websites and lesson listings.</p>
+</section><section id="pilot-workshops"><h2 class="section-heading">Pilot Workshops</h2>
+<hr class="half-width"><p>In line with <a href="03-audience.html">the importance we placed on evaluation of lesson content earlier in this training</a>, the life cycle described above places considerable emphasis on the testing of lessons in <strong>pilot workshops</strong>.</p>
+<p>For these pilot workshops to provide an effective evaluation of the lesson, it is essential to seize the opportunity they provide to collect feedback and data. For example, a pilot workshop offers a chance to answer questions like:</p>
+<ul><li>How much time does it take to teach each section of the lesson?</li>
+<li>How much time is required for each exercise?</li>
+<li>What technical issues were encountered during the lesson?</li>
+<li>What questions did learners ask during the workshop?</li>
+<li>Which parts of the lesson were confusing for learners?</li>
+<li>Which exercises could be improved to provide more information to the instructors?</li>
+</ul><p><a href="https://codimd.carpentries.org/lesson-pilot-observation-notes-template#" class="external-link">The pilot workshop notes template</a> provides a starting point, but it takes a lot of time and effort to keep track of all this information during a pilot workshop. It can be helpful to assign this task to a member of the lesson development team, who can dedicate themselves to observing the pilot and taking notes. As soon as the pilot has finished, it is a good idea to take some time to share the notes with the other lesson authors, to reflect on and discuss the experience of teaching the lesson, and to synthesise the lesson notes and any action items that come from this debrief into specific action items to improve the lesson. These should be added as new issues on the lesson repository, to help you keep track of the work that needs doing for the next iteration.</p>
+<p>For beta pilot workshops, where the lesson is taught by instructors who have not yet made a major contribution to its development, it is vital that instructors have the opportunity before the workshop to learn about the lesson from the authors, and to debrief with the authors afterwards so that they can share their experience and observations about how the lesson could be further improved.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="hosting-and-teaching-pilot-workshops" class="callout-inner">
+<h3 class="callout-title">Hosting and Teaching Pilot Workshops</h3>
+<div class="callout-content">
+<p>The Carpentries community handbook includes <a href="https://docs.carpentries.org/topic_folders/lesson_development/lesson_pilots.html" class="external-link">guidance for community members who want to teach and/or host pilot workshops</a>.</p>
+</div>
+</div>
+</div>
+</section><section id="connecting-with-the-lesson-developer-community"><h2 class="section-heading">Connecting with the Lesson Developer Community</h2>
+<hr class="half-width"><p>With over 100 lessons under development in The Carpentries Incubator, the lesson developer community is thriving. Connecting with this community can be a great way to find collaborators to contribute to or test your lesson, to stay up to date with the latest support provided to the community, and to learn from the experience of others.</p>
+<p>Here are a community activities and channels that you might be interested in joining:</p>
+<ul><li>The <code>lesson-dev</code> channel on <a href="https://swc-slack-invite.herokuapp.com/" class="external-link">The Carpentries Slack workspace</a>. This is a platform for the community to ask questions and make announcements about lesson development. You could also browse the other channels on the workspace for any that are relevant to the topic of your lesson.
+<ul><li>You may also find it helpful to create a new channel on Slack for discussion of your lesson. Chat channels like this can be valuable ways for a remote team to communicate and collaborate.</li>
+</ul></li>
+<li>
+<a href="https://carpentries.topicbox.com/groups/incubator-developers" class="external-link">The <code>incubator-developers</code> list on TopicBox</a>. The Carpentries Curriculum Team uses this mailing list to make relevant announcements to the community of lesson developers working in Incubator.</li>
+<li>The Carpentries Curriculum Team hosts monthly Lesson Development Coworking Sessions, which are a good opportunity to engage with other lesson developers and make regular progress on your project. The sessions are listed on <a href="https://carpentries.org/community/#community-events" class="external-link">The Carpentries community calendar</a>.</li>
+</ul><div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="exercise-join-relevant-channels-5-minutes" class="callout-inner">
 <h3 class="callout-title">Exercise: join relevant channels (5 minutes)</h3>
 <div class="callout-content">
-<p>TODO: time for participants to find and join relevant communication channels</p>
+<p>Use this time to explore the options listed above and join/subscribe to any communication channels that you find interesting.</p>
 </div>
 </div>
 </div>
@@ -478,16 +518,13 @@
 <div class="callout-inner">
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
-<ul><li>First key point. Brief Answer to questions. (FIXME)</li>
+<ul><li>New lessons are developed in The Carpentries Incubator and reviewed in The Carpentries Lab.</li>
 <li>Teaching a lesson for the first time is an essential intermediate step in the lesson development process.</li>
-<li>First key point. Brief Answer to questions. (FIXME)</li>
+<li>The Carpentries lesson developer community shares their experience on multiple communication channels.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="16-short-break.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="18-preparing.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -533,9 +570,9 @@
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/lesson-development-training/17-operations.html",
   "identifier": "https://carpentries.github.io/lesson-development-training/17-operations.html",
-  "dateCreated": "2022-06-01",
-  "dateModified": "2022-02-01",
-  "datePublished": "2022-06-01"
+  "dateCreated": "2022-06-02",
+  "dateModified": "2022-06-02",
+  "datePublished": "2022-06-02"
 }
 
   </script><script>
