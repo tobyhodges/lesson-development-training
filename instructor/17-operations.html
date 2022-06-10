@@ -420,7 +420,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>How we operate</h1>
-        <p> Last updated on 2022-06-02 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/17-operations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-06-10 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/17-operations.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 30 minutes </p>
         
         <div class="text-end">
@@ -460,7 +460,7 @@
 <p>The Carpentries supports the lesson developer community working in the Incubator with training (like this one), communications designed to raise awareness of lesson projects within the community, and platforms for the community to discuss and collaborate on lesson development.</p>
 <p>The Carpentries also provides a space for community-developed lessons to reside after the initial phases of development have been completed. <a href="https://carpentries-lab.org/" class="external-link">The Carpentries Lab</a> provides a platform for open peer-review of lessons, and hosts the collection of lessons that have passed through this review process. These peer-reviewed lessons can be considered ready to teach by any Instructor with sufficient knowledge of the topic. In the future, this lesson review process may also be used to determine when a lesson in the Incubator is ready to be incorporated into one of The Carpentries <em>Lesson Programs</em>, the collection of lessons and curricula that can be taught in an official workshop for Software, Library, or Data Carpentry.</p>
 </section><section id="the-lesson-life-cycle"><h2 class="section-heading">The Lesson Life Cycle</h2>
-<hr class="half-width"><p>To make it easier for other community members to assess the current state of a lesson in the Incubator, The Carpentries encourages lesson developers to indicate the status of their lesson by labeling its progress through a <em>lesson life cycle</em>:</p>
+<hr class="half-width"><p>To make it easier for other community members to assess the current state of a lesson in the Incubator, The Carpentries encourages lesson developers to indicate the status of their lesson by labelling its progress through a <em>lesson life cycle</em>:</p>
 <figure><img src="../fig/life_cycle.png" alt="Diagram of the life cycle of a lesson in The Carpentries ecosystem. A lesson is proposed at the beginning of the  pre-alpha stage. It enters alpha when it is taught for the first time. In beta, it is  taught by other instructors. A full release of the lesson is made when it is stable.  Pilot workshops take place during the alpha and beta phases. The Carpentries Lab hosts  open peer review of lessons that have completed the beta phase." class="figure mx-auto d-block"><figcaption>The life cycle of a lesson</figcaption></figure><p>Each life cycle stage indicates the level of maturity of a lesson:</p>
 <ul><li>
 <strong>pre-alpha</strong>: a first draft of the lesson is still being constructed.</li>
@@ -471,6 +471,19 @@
 <li>
 <strong>stable</strong>: the lesson has been extensively tested by the authors and others. It can be considered broadly complete and unlikely to undergo any drastic changes without warning.</li>
 </ul><p>The life cycle stage of a lesson is displayed as a banner on the lesson site, as a label on the lesson GitHub repository, and alongside the lesson whenever it is shown on The Carpentries websites and lesson listings.</p>
+<p>The life cycle stage for a lesson is configured in the <code>config.yaml</code> file we encountered when we were first introduced to <a href="07-infrastructure.html">The Carpentries Workbench</a>, as a value for the <code>life_cycle</code> field. For new lesson repositories, this value is already set to ‘pre-alpha’, so you should not have to change it yet.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="the-carpentry-field" class="callout-inner">
+<h3 class="callout-title">The <code>carpentry</code> Field</h3>
+<div class="callout-content">
+<p>The <code>config.yaml</code> file also contains a <code>carpentry</code> field, which can be used to adjust the styling applied to a lesson website e.g. to make it look like a lesson from the Software, Library, or Data Carpentry Lesson Programs.</p>
+<p>For community-developed lessons, where no official relationship exists with one of these Lesson Programs, you should keep using the <code>incubator</code> setting, before potentially switching over to another styling when the lesson moves e.g. into The Carpentries Lab.</p>
+</div>
+</div>
+</div>
 </section><section id="pilot-workshops"><h2 class="section-heading">Pilot Workshops</h2>
 <hr class="half-width"><p>In line with <a href="03-audience.html">the importance we placed on evaluation of lesson content earlier in this training</a>, the life cycle described above places considerable emphasis on the testing of lessons in <strong>pilot workshops</strong>.</p>
 <p>For these pilot workshops to provide an effective evaluation of the lesson, it is essential to seize the opportunity they provide to collect feedback and data. For example, a pilot workshop offers a chance to answer questions like:</p>
@@ -482,7 +495,7 @@
 <li>Which exercises could be improved to provide more information to the instructors?</li>
 </ul><p><a href="https://codimd.carpentries.org/lesson-pilot-observation-notes-template#" class="external-link">The pilot workshop notes template</a> provides a starting point, but it takes a lot of time and effort to keep track of all this information during a pilot workshop. It can be helpful to assign this task to a member of the lesson development team, who can dedicate themselves to observing the pilot and taking notes. As soon as the pilot has finished, it is a good idea to take some time to share the notes with the other lesson authors, to reflect on and discuss the experience of teaching the lesson, and to synthesise the lesson notes and any action items that come from this debrief into specific action items to improve the lesson. These should be added as new issues on the lesson repository, to help you keep track of the work that needs doing for the next iteration.</p>
 <p>For beta pilot workshops, where the lesson is taught by instructors who have not yet made a major contribution to its development, it is vital that instructors have the opportunity before the workshop to learn about the lesson from the authors, and to debrief with the authors afterwards so that they can share their experience and observations about how the lesson could be further improved.</p>
-<div id="callout1" class="callout callout">
+<div id="callout2" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -573,7 +586,7 @@
   "url": "https://carpentries.github.io/lesson-development-training/instructor/17-operations.html",
   "identifier": "https://carpentries.github.io/lesson-development-training/instructor/17-operations.html",
   "dateCreated": "2022-06-10",
-  "dateModified": "2022-06-02",
+  "dateModified": "2022-06-10",
   "datePublished": "2022-06-10"
 }
 
