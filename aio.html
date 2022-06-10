@@ -189,7 +189,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-lessons.html">2. Your lessons</a>
+        <a href="02-lesson-design.html">2. Lesson design</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -662,9 +662,9 @@
 </div>
 </div>
 </div>
-</section></section><section id="aio-02-lessons"><p>Content from <a href="02-lessons.html">Your lessons</a></p>
+</section></section><section id="aio-02-lesson-design"><p>Content from <a href="02-lesson-design.html">Lesson design</a></p>
 <hr>
-<p> Last updated on 2022-03-25 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/02-lessons.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-06-10 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/02-lesson-design.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -676,6 +676,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
+<li>What are the recommended steps to take when developing a new lesson?</li>
 <li>What lesson do you want to develop during and after this workshop?</li>
 </ul>
 </div>
@@ -686,6 +687,7 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
+<li>Explain the lesson design process we will be adopting for this course.</li>
 <li>Summarise the lessons that participants will be working on.</li>
 </ul>
 </div>
@@ -693,6 +695,29 @@
 </div>
 </div>
 </div>
+<section id="a-lesson-design-process"><h2 class="section-heading">A Lesson Design Process</h2>
+<hr class="half-width">
+<p>In order to design an effective lesson, we need a structured approach with the learner in mind and clearly identified goals. Throughout this training, we will use a modified version of [Nicholl’s five phase paradigm for curriculum design ][f1000-course-design-guide]. Nicholl’s paradigm describes a process, commonly referred to as <em>backward design</em>, where those who wish to develop a new curriculum first begin by defining exactly what their learners will be able to do <em>after they have completed the lesson/training/course</em>. The subsequent stages of the curriculum design process involve designing content to directly meet those stated outcomes.</p>
+<ol style="list-style-type: decimal">
+<li>Select learning outcomes</li>
+<li>Choose learning experiences to help learners achieve these outcomes</li>
+<li>Develop content to support these experiences</li>
+<li>Assess learner progress towards desired outcomes</li>
+<li>Evaluate chosen outcomes, experiences, and content based on this assessment</li>
+</ol>
+<p><strong>TODO: add a figure illustrating the setps in the list above. could be based on Fig. 2 in [f1000-course-design-guide]</strong></p>
+<p>The last two phases of Nicholl’s paradigm involve assessing learner progress towards the desired learning outcomes and evaluating the stated objectives and current content in light of the results of that assessment. In The Carpentries, most workshops are relatively short-format, without room for an extensive assessment after the teaching has finished (a <em>summative</em> assessment). To account for this, our lessons place an emphasis on <em>formative</em> assessment: assessment of learner progress that takes place <em>while the teaching is still going on</em>, to give instructors opportunities to evaluate the teaching and lesson content before the end of the workshop.</p>
+<p>To account for this, we have adapted Nicholl’s five phases in this training, to place an emphasis on assessing learning during a workshop:</p>
+<ol style="list-style-type: decimal">
+<li>Define desired learning outcomes</li>
+<li>Decide with what activities/examples/explanations we will try to teach these skills</li>
+<li>Create assessments to determine progress towards desired outcomes</li>
+<li>Write content to lead learners from one of these assessments to the next</li>
+<li>(After the break) evaluate how closely the outcomes meet the objectives</li>
+</ol>
+<p><strong>TODO: add a figure illustrating the process described in the list above. could be similar to the one used earlier for Nicholl’s original list.</strong></p>
+</section><section id="your-lessons"><h2 class="section-heading">Your lessons</h2>
+<hr class="half-width">
 <p>This training will provide many opportunities for discussion of your lessons. Providing some context now for the lessons that you will be creating will help the Trainers and other participants get involved in those discussions and give you feedback as you follow the process.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
@@ -719,12 +744,14 @@
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul>
+<li>We will learn to develop lessons based on the (slightly adapted) Nicholl’s backward lesson design process.</li>
 <li>There can be many reasons to create a new lesson.</li>
 <li>This training will give you a process to follow to ensure your lesson is effective.</li>
 </ul>
 </div>
 </div>
-</div></section><section id="aio-03-audience"><p>Content from <a href="03-audience.html">Identifying your target audience</a></p>
+</div>
+</section></section><section id="aio-03-audience"><p>Content from <a href="03-audience.html">Identifying your target audience</a></p>
 <hr>
 <p> Last updated on 2022-06-10 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/03-audience.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -738,7 +765,6 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are the recommended steps to take when developing a new lesson?</li>
 <li>Why is it so important to think about the target audience early in the process?</li>
 <li>How can you ensure that your lesson reaches the right audience?</li>
 </ul>
@@ -758,30 +784,9 @@
 </div>
 </div>
 </div>
-<section id="a-lesson-design-process"><h2 class="section-heading">A Lesson Design Process</h2>
+<section id="target-audience"><h2 class="section-heading">Target Audience</h2>
 <hr class="half-width">
-<p>In the next parts of this training, we will use a modified version of <a href="https://f1000research.com/documents/9-1377" class="external-link">Nicholl’s five phase paradigm for curriculum design</a>. Nicholl’s paradigm describes a process, commonly referred to as <em>backward design</em>, where those who wish to develop a new curriculum first begin by defining exactly what their learners will be able to do <em>after they have completed the lesson/training/course</em>. The subsequent stages of the curriculum design process involve designing content to directly meet those stated outcomes.</p>
-<ol style="list-style-type: decimal">
-<li>Select learning outcomes</li>
-<li>Choose learning experiences to help learners achieve these outcomes</li>
-<li>Develop content to support these experiences</li>
-<li>Assess learner progress towards desired outcomes</li>
-<li>Evaluate chosen outcomes, experiences, and content based on this assessment</li>
-</ol>
-<p><strong>TODO: add a figure illustrating the setps in the list above. could be based on Fig. 2 in <a href="https://f1000research.com/documents/9-1377" class="external-link">f1000-course-design-guide</a></strong></p>
-<p>The last two phases of Nicholl’s paradigm involve assessing learner progress towards the desired learning outcomes and evaluating the stated objectives and current content in light of the results of that assessment. In The Carpentries, most workshops are relatively short-format, without room for an extensive assessment after the teaching has finished (a <em>summative</em> assessment). To account for this, our lessons place an emphasis on <em>formative</em> assessment: assessment of learner progress that takes place <em>while the teaching is still going on</em>, to give instructors opportunities to evaluate the teaching and lesson content before the end of the workshop.</p>
-<p>To account for this, we have adapted Nicholl’s five phases in this training, to place an emphasis on assessing learning during a workshop:</p>
-<ol style="list-style-type: decimal">
-<li>Define desired learning outcomes</li>
-<li>Decide with what activities/examples/explanations we will try to teach these skills</li>
-<li>Create assessments to determine progress towards desired outcomes</li>
-<li>Write content to lead learners from one of these assessments to the next</li>
-<li>(After the break) evaluate how closely the outcomes meet the objectives</li>
-</ol>
-<p><strong>TODO: add a figure illustrating the process described in the list above. could be similar to the one used earlier for Nicholl’s original list.</strong></p>
-</section><section id="target-audience"><h2 class="section-heading">Target Audience</h2>
-<hr class="half-width">
-<p>Given the limited time in a short-format training, it is vital to define the scope of the lesson i.e. what people will know before and after the lesson. Thinking carefully about the target audience will help with this. Prominently displaying a description of the target audience will also help attract people with the right motivation and relevant prior knowledge to attend your workshops.</p>
+<p>Given the limited time in a short-format training, it is vital to define the scope of the lesson i.e. what people will know before and after the lesson. Thinking carefully about the target audience will help you with this and defining desired learning outcomes (the first step of the lesson design). Prominently displaying a description of the target audience will also help attract people with the right motivation and relevant prior knowledge to attend your workshops.</p>
 <div class="section level3">
 <h3 id="expertise">Expertise<a class="anchor" aria-label="anchor" href="#expertise"></a>
 </h3>
@@ -834,7 +839,7 @@
   Part 2a (for groups collaborating on the same lesson, 10 minutes)
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Share your answers with your collaborators. How do they compare? If you have identified different audiences, are they compatible? Or would your time be better spent focussing on one particular audience for this lesson?</p>
 </div>
@@ -848,7 +853,7 @@
   Part 2b (for participants developing their lesson alone, 10 minutes)
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Write 1-2 diagnostic questions, for use before the lesson is taught, to help you assess whether a respondent falls within the intended audience for your lesson.</p>
 </div>
