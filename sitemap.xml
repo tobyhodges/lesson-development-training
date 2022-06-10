@@ -28,7 +28,13 @@
     <loc>https://carpentries.github.io/lesson-development-training/08-short-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/09-episode-objectives.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/09-formative-assessment.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/10-short-break.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/10-wrap-up1.html</loc>
@@ -37,7 +43,16 @@
     <loc>https://carpentries.github.io/lesson-development-training/11-exercises.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/11-formative-assessment.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/12-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/12-wrap-up1.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/13-exercises.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/13-narrative.html</loc>
@@ -46,10 +61,22 @@
     <loc>https://carpentries.github.io/lesson-development-training/14-long-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/14-short-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/15-explanation.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/15-narrative.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/16-long-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/16-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/17-explanation.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/17-operations.html</loc>
@@ -58,7 +85,16 @@
     <loc>https://carpentries.github.io/lesson-development-training/18-preparing.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/18-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/19-operations.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/19-wrap-up2.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/20-preparing.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/20-reflecting.html</loc>
@@ -67,16 +103,37 @@
     <loc>https://carpentries.github.io/lesson-development-training/21-short-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/21-wrap-up2.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/22-external.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/22-reflecting.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/23-long-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/23-short-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/24-collaborating.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/24-external.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/25-long-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/25-wrap-up3.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/26-collaborating.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/27-wrap-up3.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/CODE_OF_CONDUCT.html</loc>
@@ -121,7 +178,13 @@
     <loc>https://carpentries.github.io/lesson-development-training/instructor/08-short-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/09-episode-objectives.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/09-formative-assessment.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/10-short-break.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/10-wrap-up1.html</loc>
@@ -130,7 +193,16 @@
     <loc>https://carpentries.github.io/lesson-development-training/instructor/11-exercises.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/11-formative-assessment.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/12-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/12-wrap-up1.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/13-exercises.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/13-narrative.html</loc>
@@ -139,10 +211,22 @@
     <loc>https://carpentries.github.io/lesson-development-training/instructor/14-long-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/14-short-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/15-explanation.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/15-narrative.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/16-long-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/16-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/17-explanation.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/17-operations.html</loc>
@@ -151,7 +235,16 @@
     <loc>https://carpentries.github.io/lesson-development-training/instructor/18-preparing.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/18-short-break.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/19-operations.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/19-wrap-up2.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/20-preparing.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/20-reflecting.html</loc>
@@ -160,16 +253,37 @@
     <loc>https://carpentries.github.io/lesson-development-training/instructor/21-short-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/21-wrap-up2.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/22-external.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/22-reflecting.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/23-long-break.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/23-short-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/24-collaborating.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/24-external.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/25-long-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/25-wrap-up3.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/26-collaborating.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/lesson-development-training/instructor/27-wrap-up3.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/lesson-development-training/instructor/CODE_OF_CONDUCT.html</loc>
