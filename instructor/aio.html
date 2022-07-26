@@ -594,7 +594,7 @@
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>You might like to make a copy of <a href="https://codimd.carpentries.org/cldt-notes-template" class="external-link">the template CodiMD notetaking page</a> and share your link with trainees so that you can take notes together during the training.</p>
 </div>
@@ -886,7 +886,7 @@
   Part 2a (for groups collaborating on the same lesson, 10 minutes)
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Share your answers with your collaborators. How do they compare? If you have identified different audiences, are they compatible? Or would your time be better spent focussing on one particular audience for this lesson?</p>
 </div>
@@ -900,7 +900,7 @@
   Part 2b (for participants developing their lesson alone, 10 minutes)
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Write 1-2 diagnostic questions, for use before the lesson is taught, to help you assess whether a respondent falls within the intended audience for your lesson.</p>
 </div>
@@ -2353,7 +2353,7 @@ Solution text, code, and other information
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>This is the hidden note! Thanks for developing new incubator lessons for others to use!</p>
 </div>
@@ -2433,7 +2433,7 @@ Solution text, code, and other information
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The third option, “Line graph of increasing carbon dioxide in ppm at the Mauna Loa Observatory from 1958 to present”, is the best option. It describes the type of plot, what is measured, and the trend.</p>
 <p>The first two options are too vague. They mention a graph but don’t give enough info to know what the graph is actually showing.</p>
@@ -2995,7 +2995,7 @@ We will return to these notes during the final training session. so please make 
         </div>
 <p>Take a break. If you can, move around and look at something away from your screen to give your eyes a rest.</p></section><section id="aio-24-external"><p>Content from <a href="24-external.html">Collaborating with newcomers</a></p>
 <hr>
-<p> Last updated on 2022-07-25 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/24-external.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-07-26 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/24-external.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 55 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -3128,6 +3128,22 @@ We will return to these notes during the final training session. so please make 
 </h3>
 <p>GitHub implements a comprehensive <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications" class="external-link">notifications system</a> to keep you up-to-date with activities in the lesson repository. GitHub also provides an additional useful notification feature for collaborative work - <strong>Mentions</strong>. The mention system notifies team members when somebody else references them in an issue, comment or pull request - you can use this to notify people when you want to check a detail with them, or let them know something has been fixed or changed (much easier than writing out all the same information again in an email!). You can use the mention system to link to individual GitHub accounts or whole teams for mentioning multiple people. Typing <code>@</code> in GitHub will bring up a list of all accounts and teams linked to the repository that can be “mentioned”.</p>
 <p>Check out <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository" class="external-link">GitHub’s documentation on setting notifications on individual repository</a>. You can choose whether to watch or unwatch an individual repository, or can choose to only be notified of certain event types such as issues, pull requests, mentions, etc.</p>
+</div>
+<div class="section level3">
+<h3 id="saying-no">Saying “No”<a class="anchor" aria-label="anchor" href="#saying-no"></a>
+</h3>
+<p>Not every contribution is a good fit for a project and, especially as your lesson becomes more stable, you will probably not want to accept every suggested change. If you receive a pull request or issue that does not fit to your lesson, consider the following points to help you politely decline without demotivating the contributor from contributing to your lesson (or another open source project) again:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Thank them</strong> for taking the time to contribute.</li>
+<li>
+<strong>Explain why the contribution does not fit</strong> into the lesson, and offer suggestions for improvement if you’re able.</li>
+<li>
+<strong>Link to relevant documentation</strong>, if you have it. Notes about the design of the lesson (e.g. from this training) and any relevant discussion threads can be very helpful here. If you notice similar repeated requests/contributions, you might want to address them in your documentation (e.g. in the <code>CONTRIBUTING.md</code> file) to save yourself time in future.</li>
+<li>
+<strong>Close the request</strong>.</li>
+</ol>
+<p>The advice above is taken from <a href="https://carpentries.github.io/maintainer-onboarding/02-communicate-contributors/index.html" class="external-link">The Carpentries Maintainer Onboarding curriculum</a>. That resource, and <a href="https://opensource.guide/best-practices/#learning-to-say-no" class="external-link">the <em>Best Practices for Maintainers</em> guide from GitHub</a> on which it is based, make excellent further reading as you prepare to transition from your role as an active developer into another as a responsive and responsible maintainer of your lesson.</p>
 </div>
 <div class="section level3">
 <h3 id="making-progress">Making progress<a class="anchor" aria-label="anchor" href="#making-progress"></a>
@@ -3319,7 +3335,7 @@ We will return to these notes during the final training session. so please make 
 </div>
 </section></section><section id="aio-27-wrap-up3"><p>Content from <a href="27-wrap-up3.html">Wrap-up</a></p>
 <hr>
-<p> Last updated on 2022-06-10 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/27-wrap-up3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-07-26 | <a href="https://github.com/carpentries/lesson-development-training/edit/main/episodes/27-wrap-up3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 30 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
